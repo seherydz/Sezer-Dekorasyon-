@@ -13,7 +13,7 @@ export default function ProjectsPage() {
             href="/"
             className="text-[15px] font-semibold tracking-[0.24em]"
           >
-Mekan Dokunuşu
+             Sezer Dekorasyon
           </Link>
 
           <Link
@@ -170,7 +170,7 @@ Mekan Dokunuşu
           <div className="flex flex-col gap-4 text-sm text-white/35 md:flex-row md:items-center md:justify-between">
 
             <p>
-              © {new Date().getFullYear()} Mekan Dokunuşu.
+              © {new Date().getFullYear()} Sezer Dekorasyon.
               Tüm hakları saklıdır.
             </p>
 

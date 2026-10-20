@@ -32,15 +32,15 @@ export async function generateMetadata({
 
   if (!project) {
     return {
-      title: "Proje Bulunamadı | Mekan Dokunuşu Dekorasyon",
+      title: "Proje Bulunamadı | Sezer Dekorasyon Dekorasyon",
     };
   }
 
   return {
-    title: `${project.title} | ${project.location} | Mekan Dokunuşu Dekorasyon`,
+    title: `${project.title} | ${project.location} | Sezer Dekorasyon Dekorasyon`,
     description: `${project.location} bölgesinde gerçekleştirilen ${project.services.join(
       ", "
-    )} uygulaması. Mekan Dokunuşu Dekorasyon proje detaylarını inceleyin.`,
+    )} uygulaması. Sezer Dekorasyon Dekorasyon proje detaylarını inceleyin.`,
   };
 }
 
@@ -91,7 +91,8 @@ export default async function ProjectDetailPage({
             href="/"
             className="text-[15px] font-semibold tracking-[0.24em]"
           >
-Mekan Dokunuşu          </Link>
+          Sezer Dekorasyon       
+             </Link>
 
           <Link
             href="/projeler"
@@ -465,7 +466,7 @@ Mekan Dokunuşu          </Link>
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 text-sm text-white/35 md:flex-row md:items-center md:justify-between">
 
           <p>
-            © {new Date().getFullYear()} Mekan Dokunuşu.
+            © {new Date().getFullYear()} Sezer Dekorasyon.
             Tüm hakları saklıdır.
           </p>
 

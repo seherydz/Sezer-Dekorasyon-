@@ -50,8 +50,8 @@ export default function Home() {
               onClick={closeMenu}
               className="relative z-70 text-[15px] font-semibold tracking-[0.24em] text-white"
             >
-Mekan Dokunuşu            </Link>
-
+              </Link>
+Sezer Dekorasyon
 
             {/* DESKTOP MENU */}
 
@@ -184,7 +184,8 @@ Mekan Dokunuşu            </Link>
                 onClick={closeMenu}
                 className="text-[14px] font-semibold tracking-[0.25em] text-white"
               >
-Mekan Dokunuşu              </Link>
+               Sezer Dekorasyon
+              </Link>
 
             </div>
 
@@ -321,19 +322,21 @@ Mekan Dokunuşu              </Link>
             </div>
 
 
-            <h1 className="max-w-5xl text-5xl font-semibold leading-[0.94] tracking-[-0.04em] sm:text-6xl md:text-7xl lg:text-8xl">
-              Mekânları
-              <br />
-              <span className="text-[#d5bc8c]">
-                dönüştürüyoruz.
-              </span>
-            </h1>
+           <h1 className="max-w-5xl text-5xl font-semibold leading-[1.05] tracking-[-0.04em] sm:text-6xl md:text-7xl lg:text-8xl">
+  Her mekânın
+  <br />
+  bir <span className="text-[#d5bc8c]">gökyüzü</span>
+  <br />
+  vardır.
+</h1>
 
+<p className="mt-8 max-w-2xl text-base leading-relaxed text-white/70 md:text-xl">
+  Hayalinizle başlar, ışığınızla şekillenir.
+</p>
 
-            <p className="mt-8 max-w-2xl text-base leading-relaxed text-white/60 md:text-xl">
-              Alçıpan, tavan sistemleri, bölme duvar ve dekorasyon
-              uygulamalarında profesyonel çözümler.
-            </p>
+<p className="mt-4 text-xs uppercase leading-7 tracking-[0.18em] text-[#c9a96e] sm:text-sm sm:tracking-[0.22em]">
+  Sizin hayaliniz. Sizin ışığınız. Sizin gökyüzünüz.
+</p>
 
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -368,7 +371,8 @@ Mekan Dokunuşu              </Link>
           </div>
 
           <span className="text-[10px] uppercase tracking-[0.28em] text-white/35">
-Mekan Dokunuşu          </span>
+                Sezer Dekorasyon
+        </span>
 
         </div>
 
@@ -745,7 +749,7 @@ Mekan Dokunuşu          </span>
           <div>
 
             <p className="text-lg leading-relaxed text-[#68645d]">
-              Mekan Dokunuşu; Antalya başta olmak üzere Türkiye
+             Sezer Dekorasyon; Antalya başta olmak üzere Türkiye
               genelinde dekorasyon ve yapı uygulamaları gerçekleştiren
               profesyonel bir uygulama ekibidir.
             </p>
@@ -992,7 +996,7 @@ Mekan Dokunuşu          </span>
     return;
   }
 
-  const mesaj = `Merhaba Mekan Dokunuşu,
+  const mesaj = `Merhaba Sezer Dekorasyon,
 
 Teklif almak istiyorum.
 
@@ -1333,8 +1337,8 @@ Projem hakkında bilgi almak ve teklif oluşturmak istiyorum.`;
             <div>
 
               <h2 className="text-xl font-semibold tracking-[0.2em]">
-Mekan Dokunuşu              </h2>
-
+Sezer Dekorasyon
+</h2>
               <p className="mt-5 max-w-md leading-relaxed text-white/40">
                 Antalya başta olmak üzere Türkiye genelinde
                 profesyonel dekorasyon ve yapı uygulamaları.
@@ -1367,7 +1371,8 @@ Mekan Dokunuşu              </h2>
 
           <div className="mt-14 border-t border-white/10 pt-8 text-xs text-white/25">
 
-            © {new Date().getFullYear()} Mekan Dokunuşu.
+            © {new Date().getFullYear()} Sezer Dekorasyon.
+
             Tüm hakları saklıdır.
 
           </div>
