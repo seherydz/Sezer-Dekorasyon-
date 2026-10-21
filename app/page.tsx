@@ -366,9 +366,9 @@ Sezer Dekorasyon
 
         <div className="absolute bottom-8 left-6 z-10 flex items-center gap-3">
 
-          <div className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-black/30 text-xs font-medium text-white">
-            N
-          </div>
+          <div className="flex h-9 w-9 items-center justify-center rounded-full border border-[#c9a96e]/60 bg-[#171614] text-[10px] font-semibold tracking-[-0.08em] text-[#c9a96e]">
+              SD
+            </div>
 
           <span className="text-[10px] uppercase tracking-[0.28em] text-white/35">
                 Sezer Dekorasyon
