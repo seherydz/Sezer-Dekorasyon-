@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { projects } from "./data/projects";
@@ -37,8 +37,7 @@ export default function Home() {
           HEADER
       ===================================================== */}
 
-      <header className="absolute left-0 top-0 z-50 w-full">
-
+   <header className="absolute left-0 top-0 z-50 w-full bg-[#171614]/35 backdrop-blur-sm">
         <div className="mx-auto max-w-7xl px-6">
 
           <div className="flex h-24 items-center justify-between border-b border-white/15">
@@ -51,7 +50,28 @@ export default function Home() {
               className="relative z-70 text-[15px] font-semibold tracking-[0.24em] text-white"
             >
               </Link>
-Sezer Dekorasyon
+              
+
+               
+<Link
+  href="/"
+  onClick={closeMenu}
+  aria-label="Sezer Dekorasyon ana sayfa"
+  className="relative z-70 flex shrink-0 items-center"
+>
+  <Image
+    src="/icon.png"
+    alt="Sezer Dekorasyon"
+    width={84}
+    height={84}
+    priority
+    className="h-17 w-17 object-contain md:h-20 md:w-20"
+  />
+</Link>
+
+
+
+
 
             {/* DESKTOP MENU */}
 
@@ -147,13 +167,21 @@ Sezer Dekorasyon
             MOBILE MENU
         ===================================================== */}
 
-        <div
-          className={`fixed inset-0 z-9999 bg-[#12110f] transition-all duration-500 lg:hidden ${
-            menuOpen
-              ? "pointer-events-auto visible opacity-100"
-              : "pointer-events-none invisible opacity-0"
-          }`}
-        >
+       
+<div
+  id="mobile-menu"
+  aria-hidden={!menuOpen}
+  className={`fixed left-0 top-0 z-99999 h-dvh w-screen overflow-y-auto overscroll-contain transition-opacity duration-300 lg:hidden ${
+    menuOpen
+      ? "pointer-events-auto visible opacity-100"
+      : "pointer-events-none invisible opacity-0"
+  }`}
+  style={{
+    backgroundColor: "#12110f",
+    isolation: "isolate",
+  }}
+>
+
 
           {/* CLOSE BUTTON */}
 
@@ -266,117 +294,119 @@ Sezer Dekorasyon
       </header>
 
 
+  
       {/* =====================================================
-          HERO
+          HERO — SEZER DEKORASYON
       ===================================================== */}
 
-      <section className="relative min-h-screen overflow-hidden bg-[#12110f] text-white">
+      <section
+        id="anasayfa"
+        className="relative isolate min-h-screen overflow-hidden bg-[#e9dfd0] text-white"
+      >
+        {/* GÖKYÜZÜ TAVANLI İÇ MEKÂN GÖRSELİ */}
+        <div
+          className="absolute inset-0 -z-20 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('/images/sezer-hero.jpg')",
+          }}
+          aria-hidden="true"
+        />
 
-        
+        {/* SOL TARAFTA METİN OKUNURLUĞU */}
+        <div
+          className="pointer-events-none absolute inset-0 -z-10"
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(37,29,22,0.58) 0%, rgba(37,29,22,0.38) 32%, rgba(37,29,22,0.08) 65%, rgba(37,29,22,0.02) 100%), linear-gradient(0deg, rgba(37,29,22,0.22) 0%, transparent 38%)",
+          }}
+          aria-hidden="true"
+        />
 
+        {/* HERO METİNLERİ */}
+        <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-end px-6 pb-24 pt-36 md:pb-28">
+          <div className="max-w-3xl">
 
-{/* ================= HERO BACKGROUND ================= */}
-
-<div className="absolute inset-0 bg-[#12110f]" />
-
-{/* PREMIUM GOLD LIGHT */}
-<div
-  className="
-    pointer-events-none
-    absolute
-    right-[-5%]
-    top-0
-    h-full
-    w-[42%]
-    bg-[#b59a6a]/5.5
-    blur-[70px]
-  "
-/>
-
-{/* PREMIUM DARK BACKGROUND */}
-<div
-  className="
-    pointer-events-none
-    absolute
-    inset-0
-    bg-[#0b0b0a]/30
-  "
-/>
-
-
-
-        {/* HERO CONTENT */}
-
-        <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-end px-6 pb-20 md:pb-28">
-
-          <div className="max-w-5xl">
-
+            {/* KONUM */}
             <div className="mb-7 flex items-center gap-4">
-
               <span className="h-px w-10 bg-[#c9a96e]" />
 
-              <p className="text-xs uppercase tracking-[0.35em] text-[#c9a96e]">
+              <p className="text-xs uppercase tracking-[0.35em] text-[#f0d5a2]">
                 Antalya • Türkiye
               </p>
-
             </div>
 
+            {/* ANA BAŞLIK */}
+            <h1 className="max-w-3xl text-5xl font-semibold leading-[1.05] tracking-[-0.04em] sm:text-6xl md:text-7xl lg:text-8xl">
+              Tavanı 
+              <br />
+               {" "}
+              <span className="text-[#e4c58d]">
+                Gökyüzüyle
+              </span>
+              <br />
+              Buluşturuyoruz
+            </h1>
 
-           <h1 className="max-w-5xl text-5xl font-semibold leading-[1.05] tracking-[-0.04em] sm:text-6xl md:text-7xl lg:text-8xl">
-  Her mekânın
-  <br />
-  bir <span className="text-[#d5bc8c]">gökyüzü</span>
-  <br />
-  vardır.
-</h1>
+            {/* AÇIKLAMA */}
+            <p className="mt-8 max-w-xl text-base leading-relaxed text-white/95 md:text-xl">
+              Hayalinizle başlar, ışığınızla şekillenir.
+              Yaşam alanlarınızı estetik, işlevsellik ve size özel
+              çözümlerle yeniden yorumluyoruz.
+            </p>
 
-<p className="mt-8 max-w-2xl text-base leading-relaxed text-white/70 md:text-xl">
-  Hayalinizle başlar, ışığınızla şekillenir.
-</p>
+            {/* MARKA SLOGANI */}
+            <p className="mt-5 max-w-xl text-xs font-medium uppercase leading-7 tracking-[0.16em] text-[#f0d5a2] sm:text-sm sm:tracking-[0.2em]">
+              Sizin hayaliniz. Sizin ışığınız. Sizin gökyüzünüz.
+            </p>
 
-<p className="mt-4 text-xs uppercase leading-7 tracking-[0.18em] text-[#c9a96e] sm:text-sm sm:tracking-[0.22em]">
-  Sizin hayaliniz. Sizin ışığınız. Sizin gökyüzünüz.
-</p>
-
-
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-
+            {/* BUTONLAR */}
+            <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <a
                 href="#projeler"
-                className="inline-flex items-center justify-center rounded-full bg-[#c9a96e] px-8 py-4 text-sm font-medium text-[#171614] transition-all duration-300 hover:bg-[#dcc18e]"
+                className="inline-flex items-center justify-center gap-3 rounded-full bg-[#c9a96e] px-8 py-4 text-sm font-semibold text-[#171614] shadow-lg shadow-black/10 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#dcc18e]"
               >
                 Projelerimizi İncele
+                <span aria-hidden="true">→</span>
               </a>
 
               <a
                 href="#teklif"
-                className="inline-flex items-center justify-center rounded-full border border-white/20 px-8 py-4 text-sm font-medium text-white transition-all duration-300 hover:border-[#c9a96e] hover:bg-white/5"
+                className="inline-flex items-center justify-center rounded-full border border-white/70 bg-black/10 px-8 py-4 text-sm font-medium text-white backdrop-blur-sm transition-all duration-300 hover:border-[#e4c58d] hover:bg-white/10"
               >
                 Teklif Al
               </a>
+            </div>
 
+            {/* MOBİL ALT ETİKET */}
+            <div className="mt-12 flex items-center gap-3 md:hidden">
+              <div className="flex h-9 w-9 items-center justify-center rounded-full border border-[#e4c58d]/70 bg-black/20 text-[10px] font-semibold tracking-[-0.08em] text-[#f0d5a2]">
+                SD
+              </div>
+
+              <span className="text-[10px] uppercase tracking-[0.28em] text-white/85">
+                Sezer Dekorasyon
+              </span>
             </div>
 
           </div>
-
         </div>
 
+        {/* MASAÜSTÜ ALT ETİKET */}
+        <div className="absolute bottom-8 left-6 z-10 hidden items-center gap-3 md:flex">
+          <div className="flex h-9 w-9 items-center justify-center rounded-full border border-[#c9a96e]/70 bg-black/20 text-[10px] font-semibold tracking-[-0.08em] text-[#f0d5a2]">
+            SD
+          </div>
 
-        {/* HERO BOTTOM LABEL */}
-
-        <div className="absolute bottom-8 left-6 z-10 flex items-center gap-3">
-
-          <div className="flex h-9 w-9 items-center justify-center rounded-full border border-[#c9a96e]/60 bg-[#171614] text-[10px] font-semibold tracking-[-0.08em] text-[#c9a96e]">
-              SD
-            </div>
-
-          <span className="text-[10px] uppercase tracking-[0.28em] text-white/35">
-                Sezer Dekorasyon
-        </span>
-
+          <span className="text-[10px] uppercase tracking-[0.28em] text-white/85">
+            Sezer Dekorasyon
+          </span>
         </div>
-
       </section>
+
+
+
+
+
 
 
       {/* =====================================================
@@ -715,27 +745,46 @@ Sezer Dekorasyon
 
 
 
-
-
-
       {/* =====================================================
           HAKKIMIZDA
       ===================================================== */}
 
       <section
         id="hakkimizda"
-        className="bg-[#faf9f6] py-24 md:py-32"
+        className="bg-[#faf9f6] py-20 md:py-28"
       >
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 md:grid-cols-2 md:gap-14 lg:gap-20">
 
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2">
+          {/* SOL: FOTOĞRAF VE İSİM */}
+<div className="mx-auto w-full max-w-xs md:mx-0 md:max-w-[320px]">     
+         <div className="overflow-hidden rounded-2xl border border-[#c9a96e]/30 bg-[#e9e5dd]">
+              <Image
+                src="/images/sezer-hakkimizda.jpg"
+                alt="Sezer Özveren - Sezer Dekorasyon"
+                width={1024}
+                height={1536}
+                sizes="(max-width: 768px) 100vw, 40vw"
+                className="h-auto max-h-105 w-full object-contain object-top"
+              />
+            </div>
 
-          <div>
+            <div className="mt-5 border-l-2 border-[#c9a96e] pl-4">
+              <h3 className="text-2xl font-semibold tracking-[0.12em] text-[#171614] md:text-3xl">
+                SEZER ÖZVEREN
+              </h3>
+              <p className="mt-2 text-xs uppercase tracking-[0.25em] text-[#9c8150]">
+                SEZER DEKORASYON
+              </p>
+            </div>
+          </div>
 
-            <p className="text-xs uppercase tracking-[0.3em] text-[#9c8150]">
-              Hakkımızda
+          {/* SAĞ: HAKKIMIZDA METİNLERİ */}
+          <div className="max-w-xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#9c8150]">
+              HAKKIMIZDA
             </p>
 
-            <h2 className="mt-5 text-4xl font-semibold tracking-[-0.03em] text-[#171614] md:text-6xl">
+            <h2 className="mt-5 text-4xl font-semibold tracking-[-0.03em] text-[#171614] md:text-5xl lg:text-6xl">
               Tecrübe,
               <br />
               <span className="text-[#a88a58]">
@@ -743,105 +792,101 @@ Sezer Dekorasyon
               </span>
             </h2>
 
-          </div>
+            <p className="mt-7 text-base leading-8 text-[#68645d] md:text-lg">
+              Sezer Dekorasyon; Antalya Bodrum Aydın İzmir başta olmak üzere Türkiye genelinde dekorasyon ve yapı uygulamalarında uzmanlaşmış profesyonel bir uygulama ekibidir.
 
+             13 yılı aşkın saha deneyimimizi, ustalık ve titizlikle birleştirerek sıradan mekânları değer katan yaşam alanlarına dönüştürüyoruz. Her projeyi keşiften uygulamaya, son dokunuşlardan teslimata kadar özenle yönetiyor; estetik, işlevsellik ve kaliteli işçiliği bir araya getiriyoruz.   <p></p>
+            <strong>Profesyonel Uygulama. Güçlü Detaylar. Kalıcı Değer.</strong>
 
-          <div>
-
-            <p className="text-lg leading-relaxed text-[#68645d]">
-             Sezer Dekorasyon; Antalya başta olmak üzere Türkiye
-              genelinde dekorasyon ve yapı uygulamaları gerçekleştiren
-              profesyonel bir uygulama ekibidir.
             </p>
 
-            <p className="mt-6 text-lg leading-relaxed text-[#68645d]">
-              Projeleri keşif aşamasından teslim aşamasına kadar
-              planlı şekilde yürütüyor, ihtiyaçlara uygun çözümler
-              geliştiriyoruz.
+            <p className="mt-5 text-base leading-8 text-[#68645d] md:text-lg">
+             Her projeyi stratejik planlama, kusursuz işçilik ve titiz uygulama anlayışıyla keşiften teslimata kadar yönetiyor; estetik, işlevsellik ve kaliteyi bir araya getirerek mekânlara değer katan, beklentilerin ötesine geçen sonuçlar ortaya koyuyoruz.
             </p>
 
-
-            <div className="mt-10 flex items-center gap-4">
-
+            <div className="mt-8 flex items-center gap-4">
               <span className="h-px w-12 bg-[#c9a96e]" />
-
-              <span className="text-xs uppercase tracking-[0.25em] text-[#9c8150]">
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#9c8150]">
                 Profesyonel Uygulama
               </span>
-
             </div>
-
           </div>
 
         </div>
-
       </section>
 
 
-      
 
-      <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 md:grid-cols-2 lg:grid-cols-4">
-
+        
+<div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 md:grid-cols-2 lg:grid-cols-4">
   {[
-    [
-      "01",
-      "Profesyonel Ekip",
-      "Projeye uygun çözümler üreten deneyimli uygulama ekibi.",
-    ],
-    [
-      "02",
-      "Planlı Süreç",
-      "Keşiften teslimata kadar tüm aşamaları kontrollü şekilde yönetiyoruz.",
-    ],
-    [
-      "03",
-      "Şeffaf Teklif",
-      "Projenin kapsamına göre ihtiyaçları değerlendiriyor, net ve anlaşılır teklif sunuyoruz.",
-    ],
-    [
-      "04",
-      "Tahmini Teslimat",
-      "Projenin kapsamına göre yaklaşık uygulama süresini önceden planlıyoruz.",
-    ],
-  ].map(([number, title, text]) => (
-
+    {
+      title: "Profesyonel Ekip",
+      text: "Projeye uygun çözümler üreten deneyimli uygulama ekibi.",
+      image: "/images/1.jpg",
+      alt: "Sezer Dekorasyon profesyonel uygulama ekibi",
+    },
+    {
+      title: "Planlı Süreç",
+      text: "Keşiften teslimata kadar tüm aşamaları kontrollü şekilde yönetiyoruz.",
+      image: "/images/2.jpg",
+      alt: "Keşif, lazer ölçümü ve proje planlaması",
+    },
+    {
+      title: "Şeffaf Teklif",
+      text: "Projenin kapsamına göre ihtiyaçları değerlendiriyor, net ve anlaşılır teklif sunuyoruz.",
+      image: "/images/3.jpg",
+      alt: "Dekorasyon projesi ve teklif hazırlığı",
+    },
+    {
+      title: "Tahmini Teslimat",
+      text: "Projenin kapsamına göre yaklaşık uygulama süresini önceden planlıyoruz.",
+      image: "/images/4.jpg",
+      alt: "Tamamlanmış dekorasyon uygulamasından memnun aile",
+    },
+  ].map((item) => (
     <div
-      key={number}
-      className="group bg-[#171614] p-8 transition-all duration-300 hover:bg-[#201e1a] md:p-10"
+      key={item.title}
+      className="group flex flex-col bg-[#171614] p-6 transition-colors duration-300 hover:bg-[#201e1a] md:p-7"
     >
-
-      <div className="flex items-start justify-between">
-
-        <span className="text-3xl font-light text-[#c9a96e]">
-          {number}
-        </span>
-
-        <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-xs text-white/40 transition-all duration-300 group-hover:border-[#c9a96e] group-hover:text-[#c9a96e]">
+      <div className="flex items-start justify-end">
+        <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-xs text-white/40 transition-colors duration-300 group-hover:border-[#c9a96e] group-hover:text-[#c9a96e]">
           ↗
         </span>
-
       </div>
 
-      <div className="mt-16">
-
+      <div className="mt-5">
         <h3 className="text-xl font-medium text-white">
-          {title}
+          {item.title}
         </h3>
 
-        <p className="mt-4 text-sm leading-7 text-white/45">
-          {text}
+        <p className="mt-3 text-sm leading-6 text-white/55">
+          {item.text}
         </p>
+      </div>
 
-        <div className="mt-7 h-px w-8 bg-[#c9a96e] transition-all duration-300 group-hover:w-16" />
+      <div className="mt-6 overflow-hidden rounded-xl border border-white/10">
+       
+<Image
+  src={item.image}
+  alt={item.alt}
+  width={600}
+  height={360}
+  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+  className="aspect-5/3 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+/>
 
       </div>
 
+      <div className="mt-5 h-px w-8 bg-[#c9a96e] transition-all duration-300 group-hover:w-16" />
     </div>
-
   ))}
-
 </div>
+    
 
+
+
+    
 
       {/* =====================================================
           KARİYER
