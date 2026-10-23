@@ -29,7 +29,6 @@ export default function Home() {
     };
   }, [menuOpen]);
 
-  const newLocal = "flex h-dvh w-full flex-col overflow-hidden px-8 py-8";
   return (
     <main className="min-h-screen bg-[#f5f3ef] text-[#171614]">
 
@@ -73,53 +72,49 @@ export default function Home() {
 
 
 
-            {/* DESKTOP MENU */}
 
-            <nav className="hidden items-center gap-8 text-[14px] text-white lg:flex">
+{/* DESKTOP MENU */}
 
-              <a
-                href="#hizmetler"
-                className="transition-colors duration-300 hover:text-[#d1b27a]"
-              >
-                Hizmetler
-              </a>
+<nav className="hidden items-center gap-3 lg:flex">
 
-              <a
-                href="#projeler"
-                className="transition-colors duration-300 hover:text-[#d1b27a]"
-              >
-                Projeler
-              </a>
+  <a
+    href="#hizmetler"
+    className="rounded-xl border border-white/25 bg-[#171614]/40 px-4 py-3 text-[15px] font-medium text-white shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-[#d5bc8c] hover:bg-[#d5bc8c]/15 hover:text-[#f5dfaa] hover:shadow-[0_4px_16px_rgba(201,169,110,0.18)]"
+  >
+    Hizmetler
+  </a>
 
-              <a
-                href="#hakkimizda"
-                className="transition-colors duration-300 hover:text-[#d1b27a]"
-              >
-                Hakkımızda
-              </a>
+  <a
+    href="#projeler"
+    className="rounded-xl border border-white/25 bg-[#171614]/40 px-4 py-3 text-[15px] font-medium text-white shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-[#d5bc8c] hover:bg-[#d5bc8c]/15 hover:text-[#f5dfaa] hover:shadow-[0_4px_16px_rgba(201,169,110,0.18)]"
+  >
+    Projeler
+  </a>
 
-              <a
-                href="#kariyer"
-                className="transition-colors duration-300 hover:text-[#d1b27a]"
-              >
-                Kariyer
-              </a>
+  <a
+    href="#hakkimizda"
+    className="rounded-xl border border-white/25 bg-[#171614]/40 px-4 py-3 text-[15px] font-medium text-white shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-[#d5bc8c] hover:bg-[#d5bc8c]/15 hover:text-[#f5dfaa] hover:shadow-[0_4px_16px_rgba(201,169,110,0.18)]"
+  >
+    Hakkımızda
+  </a>
 
-              <a
-                href="#iletisim"
-                className="transition-colors duration-300 hover:text-[#d1b27a]"
-              >
-                İletişim
-              </a>
+  <a
+    href="#kariyer"
+    className="rounded-xl border border-white/25 bg-[#171614]/40 px-4 py-3 text-[15px] font-medium text-white shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-[#d5bc8c] hover:bg-[#d5bc8c]/15 hover:text-[#f5dfaa] hover:shadow-[0_4px_16px_rgba(201,169,110,0.18)]"
+  >
+    Kariyer
+  </a>
 
-              <a
-                href="#teklif"
-                className="rounded-full bg-[#c9a96e] px-6 py-3 font-medium text-[#171614] transition-all duration-300 hover:bg-[#dcc18e]"
-              >
-                Teklif Al
-              </a>
+  <a
+    href="#iletisim"
+    className="rounded-xl border border-[#f0d58c] bg-linear-to-br from-[#d5b477] to-[#f0d58c] px-5 py-3 text-[15px] font-semibold text-[#211a10] shadow-[0_3px_14px_rgba(201,169,110,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:from-[#f0d58c] hover:to-[#f8e8bd] hover:shadow-[0_6px_22px_rgba(201,169,110,0.4)]"
+  >
+    İletişim
+  </a>
 
-            </nav>
+</nav>
+
+
 
 
             {/* MOBILE HAMBURGER */}
@@ -168,128 +163,265 @@ export default function Home() {
         ===================================================== */}
 
        
+
+{/* =====================================================
+    MOBILE MENU — SEZER LUXURY
+===================================================== */}
+
 <div
   id="mobile-menu"
   aria-hidden={!menuOpen}
-  className={`fixed left-0 top-0 z-99999 h-dvh w-screen overflow-y-auto overscroll-contain transition-opacity duration-300 lg:hidden ${
+  className={`fixed inset-0 z-99999 h-dvh overflow-y-auto overscroll-contain transition-all duration-500 lg:hidden ${
     menuOpen
-      ? "pointer-events-auto visible opacity-100"
-      : "pointer-events-none invisible opacity-0"
+      ? "visible pointer-events-auto opacity-100"
+      : "invisible pointer-events-none opacity-0"
   }`}
   style={{
-    backgroundColor: "#12110f",
     isolation: "isolate",
+    backgroundImage:
+      "linear-gradient(145deg, rgba(23,19,16,0.93), rgba(37,27,20,0.88) 48%, rgba(15,15,14,0.96)), url('/images/sezer-hero.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
   }}
 >
+  {/* ALTIN IŞIK EFEKTİ */}
+  <div
+    aria-hidden="true"
+    className="pointer-events-none absolute inset-0 -z-10"
+    style={{
+      background:
+        "radial-gradient(ellipse at 85% 15%, rgba(201,169,110,0.20), transparent 42%), radial-gradient(ellipse at 5% 75%, rgba(201,169,110,0.10), transparent 35%)",
+    }}
+  />
 
+  <div className="relative mx-auto flex min-h-dvh w-full max-w-xl flex-col px-6 pb-7 pt-6 sm:px-9">
 
-          {/* CLOSE BUTTON */}
+    {/* ÜST BÖLÜM — LOGO VE KAPATMA */}
 
-          <button
-            type="button"
-            onClick={closeMenu}
-            aria-label="Menüyü kapat"
-            className="fixed right-6 top-6 z-10000 flex h-12 w-12 items-center justify-center text-white"
+    <div className="flex items-center justify-between border-b border-[#c9a96e]/35 pb-6">
+
+      <Link
+        href="/"
+        onClick={closeMenu}
+        aria-label="Sezer Dekorasyon ana sayfa"
+        className="group flex items-center gap-3"
+      >
+        {/* SD ALTIN AMBLEM */}
+        <svg
+          viewBox="0 0 76 76"
+          className="h-16.5 w-16.5 shrink-0 drop-shadow-[0_0_10px_rgba(201,169,110,0.18)]"
+          fill="none"
+          aria-hidden="true"
+        >
+          <defs>
+            <linearGradient
+              id="sd-gold"
+              x1="10"
+              y1="5"
+              x2="65"
+              y2="72"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stopColor="#f6e4b5" />
+              <stop offset=".38" stopColor="#c9a96e" />
+              <stop offset=".7" stopColor="#a98242" />
+              <stop offset="1" stopColor="#f3d99b" />
+            </linearGradient>
+          </defs>
+
+          <circle
+            cx="38"
+            cy="38"
+            r="35"
+            stroke="url(#sd-gold)"
+            strokeWidth="1.3"
+          />
+
+          <circle
+            cx="38"
+            cy="38"
+            r="31.5"
+            stroke="#c9a96e"
+            strokeOpacity=".28"
+            strokeWidth=".6"
+          />
+
+          <text
+            x="38"
+            y="47"
+            textAnchor="middle"
+            fontFamily="Georgia, 'Times New Roman', serif"
+            fontSize="39"
+            fontWeight="400"
+            letterSpacing="-5"
+            fill="url(#sd-gold)"
           >
+            SD
+          </text>
 
-            <span className="absolute h-0.5 w-8 rotate-45 bg-white" />
+          <path
+            d="M19 53H57"
+            stroke="url(#sd-gold)"
+            strokeWidth=".8"
+          />
 
-            <span className="absolute h-0.5 w-8 -rotate-45 bg-white" />
+          <text
+            x="38"
+            y="61"
+            textAnchor="middle"
+            fontFamily="Georgia, serif"
+            fontSize="5.5"
+            letterSpacing="1.7"
+            fill="#e6cc92"
+          >
+            SEZER
+          </text>
+        </svg>
 
-          </button>
+        <span className="flex flex-col gap-1">
+          <span className="font-serif text-[21px] tracking-[0.17em] text-[#f3e5c5]">
+            SEZER
+          </span>
+          <span className="text-[9px] tracking-[0.31em] text-[#c9a96e]">
+            DEKORASYON
+          </span>
+        </span>
+      </Link>
 
+      {/* KAPATMA BUTONU */}
+      <button
+        type="button"
+        onClick={closeMenu}
+        aria-label="Menüyü kapat"
+className="flex h-12 w-12 items-center justify-center rounded-full border border-[#f0d58c] bg-[#211a13]/80 text-[#f5dfaa] shadow-[0_0_18px_rgba(201,169,110,0.22)] transition-all duration-300 hover:rotate-90 hover:bg-[#c9a96e]/20"      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.4"
+          className="h-6 w-6"
+          aria-hidden="true"
+        >
+          <path d="M5 5L19 19M19 5L5 19" />
+        </svg>
+      </button>
 
-          {/* MENU CONTENT */}
+    </div>
 
-          <div className={newLocal}>
+    {/* MENÜ BAŞLIĞI */}
 
-            {/* MOBILE LOGO */}
+    <div className="mb-5 mt-8 flex items-center gap-3">
+      <span className="h-px w-8 bg-[#d5bc8c]" />
+      <p className="text-[10px] font-medium uppercase tracking-[0.34em] text-[#d5bc8c]">
+        Menü
+      </p>
+    </div>
 
-            <div className="pr-16">
+    {/* AYRI AYRI MENÜ KARTLARI */}
 
-              <Link
-                href="/"
-                onClick={closeMenu}
-                className="text-[14px] font-semibold tracking-[0.25em] text-white"
-              >
-               Sezer Dekorasyon
-              </Link>
+    <nav
+      aria-label="Mobil menü"
+      className="flex flex-1 flex-col justify-center gap-3"
+    >
+      {[
+        { label: "Hizmetler", href: "#hizmetler", number: "01" },
+        { label: "Projeler", href: "#projeler", number: "02" },
+        { label: "Hakkımızda", href: "#hakkimizda", number: "03" },
+        { label: "Kariyer", href: "#kariyer", number: "04" },
+      ].map((item) => (
+        <a
+          key={item.href}
+          href={item.href}
+          onClick={closeMenu}
+          className="group flex min-h-15.5 items-center justify-between rounded-xl border border-[#c9a96e]/35 bg-white/5.5 px-4 py-3 text-[#f7f2e8] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] backdrop-blur-xl transition-all duration-300 hover:translate-x-1 hover:border-[#e4c58d]/80 hover:bg-[#c9a96e]/15 active:scale-[0.98]"
+        >
+          <span className="flex items-center gap-4">
+            <span className="font-serif text-sm text-[#c9a96e]">
+              {item.number}
+            </span>
+            <span className="text-[17px] font-medium tracking-wide">
+              {item.label}
+            </span>
+          </span>
 
-            </div>
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            className="h-5 w-5 text-[#c9a96e] transition-transform duration-300 group-hover:translate-x-1"
+            aria-hidden="true"
+          >
+            <path d="M5 12H19M12 5L19 12L12 19" />
+          </svg>
+        </a>
+      ))}
 
+      {/* İLETİŞİM — ALTIN BUTON */}
 
-            {/* MENU LINKS */}
+      <a
+        href="#iletisim"
+        onClick={closeMenu}
+        className="group mt-1 flex min-h-16 items-center justify-between rounded-xl border border-[#f1d79d] bg-linear-to-r from-[#c6a267] via-[#f0d59a] to-[#c6a267] px-5 py-3 text-[#241b10] shadow-[0_5px_24px_rgba(201,169,110,0.19)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(201,169,110,0.35)] active:scale-[0.98]"
+      >
+        <span className="flex items-center gap-4">
+          <span className="font-serif text-sm text-[#624a27]">
+            05
+          </span>
+          <span className="text-[17px] font-semibold tracking-wide">
+            İletişim
+          </span>
+        </span>
 
-            <nav className="flex flex-1 flex-col justify-center gap-6">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.6"
+          className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+          aria-hidden="true"
+        >
+          <path d="M5 12H19M12 5L19 12L12 19" />
+        </svg>
+      </a>
 
-              <a
-                href="#hizmetler"
-                onClick={closeMenu}
-                className="text-[32px] font-medium tracking-tight text-white transition-colors duration-300 hover:text-[#c9a96e]"
-              >
-                Hizmetler
-              </a>
+    </nav>
 
-              <a
-                href="#projeler"
-                onClick={closeMenu}
-                className="text-[32px] font-medium tracking-tight text-white transition-colors duration-300 hover:text-[#c9a96e]"
-              >
-                Projeler
-              </a>
+    {/* ALT BÖLÜM */}
 
-              <a
-                href="#hakkimizda"
-                onClick={closeMenu}
-                className="text-[32px] font-medium tracking-tight text-white transition-colors duration-300 hover:text-[#c9a96e]"
-              >
-                Hakkımızda
-              </a>
+    <div className="mt-7 border-t border-[#c9a96e]/30 pt-5">
 
-              <a
-                href="#kariyer"
-                onClick={closeMenu}
-                className="text-[32px] font-medium tracking-tight text-white transition-colors duration-300 hover:text-[#c9a96e]"
-              >
-                Kariyer
-              </a>
+      <div className="flex items-end justify-between gap-4">
 
-              <a
-                href="#iletisim"
-                onClick={closeMenu}
-                className="text-[32px] font-medium tracking-tight text-white transition-colors duration-300 hover:text-[#c9a96e]"
-              >
-                İletişim
-              </a>
+        <div className="min-w-0">
+          <p className="text-[10px] font-medium uppercase tracking-[0.27em] text-[#d5bc8c]">
+            Antalya · Türkiye
+          </p>
 
-              <a
-                href="#teklif"
-                onClick={closeMenu}
-                className="mt-3 inline-flex w-fit rounded-full bg-[#c9a96e] px-7 py-4 text-[15px] font-medium text-[#171614] transition-all duration-300 hover:bg-[#dcc18e]"
-              >
-                Teklif Al
-              </a>
-
-            </nav>
-
-
-            {/* MOBILE FOOTER */}
-
-            <div className="border-t border-white/10 pt-6">
-
-              <p className="text-[10px] uppercase tracking-[0.28em] text-[#c9a96e]">
-                Antalya • Türkiye
-              </p>
-
-              <p className="mt-3 max-w-xs text-xs leading-relaxed text-white/35">
-                Profesyonel dekorasyon ve yapı uygulamaları.
-              </p>
-
-            </div>
-
-          </div>
-
+          <p className="mt-3 max-w-62.5 text-xs leading-relaxed text-white/65">
+            Mekânlara değer,
+            <br />
+            hayatınıza ışık katıyoruz.
+          </p>
         </div>
+
+       
+          
+      </div>
+
+      <p className="mt-5 text-[9px] uppercase tracking-[0.22em] text-white/30">
+        Sezer Dekorasyon · Tüm hakları saklıdır
+      </p>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
 
       </header>
 
@@ -538,36 +670,36 @@ export default function Home() {
       dekorasyon ve yapı uygulamalarından seçilmiş projeleri inceleyin.
     </p>
 
+{/* =====================================================
+    ÖNE ÇIKAN PROJELER
+===================================================== */}
 
-    {/* =====================================================
-        ÖNE ÇIKAN PROJELER
-    ===================================================== */}
+<div className="mt-16 grid grid-cols-1 gap-5 md:grid-cols-2">
 
-    <div className="mt-16 grid grid-cols-1 gap-5 md:grid-cols-2">
+  {projects.map((project) => (
 
-      {projects.map((project) => (
-
-        <Link
-          key={project.slug}
-          href={`/projeler/${project.slug}`}
-          className="
-            group
-            relative
-            block
-            aspect-4/3
-            overflow-hidden
-            rounded-2xl
-            bg-[#171614]
-          "
-        >
+    <Link
+      key={project.slug}
+      href={`/projeler/${project.slug}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+        group
+        relative
+        block
+        aspect-4/3
+        overflow-hidden
+        rounded-2xl
+        bg-[#171614]
+      "
+    >
 
           {/* PROJE GÖRSELİ */}
 
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={project.image}
-            alt={`${project.location} ${project.category} - ${project.title}`}
-            className="
+alt={`${project.location} ${project.title}`}            className="
               absolute
               inset-0
               h-full
@@ -683,6 +815,8 @@ export default function Home() {
 
       <Link
         href="/projeler"
+         target="_blank"
+        rel="noopener noreferrer"
         className="
           group
           inline-flex
@@ -792,17 +926,20 @@ export default function Home() {
               </span>
             </h2>
 
-            <p className="mt-7 text-base leading-8 text-[#68645d] md:text-lg">
-              Sezer Dekorasyon; Antalya Bodrum Aydın İzmir başta olmak üzere Türkiye genelinde dekorasyon ve yapı uygulamalarında uzmanlaşmış profesyonel bir uygulama ekibidir.
+<p className="mt-7 text-base leading-8 text-[#68645d] md:text-lg">
+  Sezer Dekorasyon; Antalya, Bodrum, Aydın ve İzmir başta olmak üzere
+  Türkiye genelinde dekorasyon ve yapı uygulamalarında uzmanlaşmış
+  profesyonel bir uygulama ekibidir. 13 yılı aşkın saha deneyimimizi,
+  ustalık ve titizlikle birleştirerek sıradan mekânları değer katan
+  yaşam alanlarına dönüştürüyoruz. Her projeyi keşiften uygulamaya,
+  son dokunuşlardan teslimata kadar özenle yönetiyor; estetik,
+  işlevsellik ve kaliteli işçiliği bir araya getiriyoruz.
+</p>
 
-             13 yılı aşkın saha deneyimimizi, ustalık ve titizlikle birleştirerek sıradan mekânları değer katan yaşam alanlarına dönüştürüyoruz. Her projeyi keşiften uygulamaya, son dokunuşlardan teslimata kadar özenle yönetiyor; estetik, işlevsellik ve kaliteli işçiliği bir araya getiriyoruz.   <p></p>
-            <strong>Profesyonel Uygulama. Güçlü Detaylar. Kalıcı Değer.</strong>
+<p className="mt-5 font-semibold text-[#29241d]">
+  Profesyonel Uygulama. Güçlü Detaylar. Kalıcı Değer.
+</p>
 
-            </p>
-
-            <p className="mt-5 text-base leading-8 text-[#68645d] md:text-lg">
-             Her projeyi stratejik planlama, kusursuz işçilik ve titiz uygulama anlayışıyla keşiften teslimata kadar yönetiyor; estetik, işlevsellik ve kaliteyi bir araya getirerek mekânlara değer katan, beklentilerin ötesine geçen sonuçlar ortaya koyuyoruz.
-            </p>
 
             <div className="mt-8 flex items-center gap-4">
               <span className="h-px w-12 bg-[#c9a96e]" />
@@ -818,7 +955,9 @@ export default function Home() {
 
 
         
-<div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 md:grid-cols-2 lg:grid-cols-4">
+
+<div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-[#d7c5a5] bg-[#d7c5a5] shadow-[0_18px_50px_rgba(87,69,43,0.08)] md:grid-cols-2 lg:grid-cols-4">
+
   {[
     {
       title: "Profesyonel Ekip",
@@ -847,41 +986,51 @@ export default function Home() {
   ].map((item) => (
     <div
       key={item.title}
-      className="group flex flex-col bg-[#171614] p-6 transition-colors duration-300 hover:bg-[#201e1a] md:p-7"
+      className="group flex flex-col bg-[#e9e2d6] p-6 transition-colors duration-300 hover:bg-[#f4eee4] md:p-7"
     >
+
+      {/* OK SİMGESİ */}
+
       <div className="flex items-start justify-end">
-        <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-xs text-white/40 transition-colors duration-300 group-hover:border-[#c9a96e] group-hover:text-[#c9a96e]">
+        <span className="flex h-9 w-9 items-center justify-center rounded-full border border-[#c9a96e]/60 bg-[#f5efe5] text-xs text-[#9b8050] transition-all duration-300 group-hover:border-[#b18b4e] group-hover:bg-[#c9a96e] group-hover:text-white">
           ↗
         </span>
       </div>
 
+      {/* BAŞLIK VE AÇIKLAMA */}
+
       <div className="mt-5">
-        <h3 className="text-xl font-medium text-white">
+        <h3 className="text-xl font-medium text-[#29241d]">
           {item.title}
         </h3>
 
-        <p className="mt-3 text-sm leading-6 text-white/55">
+        <p className="mt-3 text-sm leading-6 text-[#756b5c]">
           {item.text}
         </p>
       </div>
 
-      <div className="mt-6 overflow-hidden rounded-xl border border-white/10">
-       
-<Image
-  src={item.image}
-  alt={item.alt}
-  width={600}
-  height={360}
-  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-  className="aspect-5/3 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-/>
+      {/* GÖRSEL */}
 
+      <div className="mt-6 overflow-hidden rounded-xl border border-[#d4c6b1]">
+        <Image
+          src={item.image}
+          alt={item.alt}
+          width={600}
+          height={360}
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          className="aspect-5/3 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+        />
       </div>
 
+      {/* ALTIN VURGU ÇİZGİSİ */}
+
       <div className="mt-5 h-px w-8 bg-[#c9a96e] transition-all duration-300 group-hover:w-16" />
+
     </div>
   ))}
+
 </div>
+
     
 
 
@@ -949,6 +1098,159 @@ export default function Home() {
      {/* ================================
     TEKLİF
 ================================ */}
+
+
+
+
+
+{/* ================================
+    İLETİŞİM VE SOSYAL MEDYA
+================================ */}
+
+<section
+  id="iletisim"
+  className="bg-[#d5b477] py-16 md:py-20"
+>
+  <div className="mx-auto max-w-7xl px-6">
+    <div className="grid gap-4 md:grid-cols-3">
+
+      {/* TELEFON */}
+      <a
+        href="tel:+905350826748"
+className="group rounded-2xl border-2 border-[#d6b66f] bg-linear-to-br from-white via-[#fffdf8] to-[#f5ead5] p-6 shadow-[0_4px_18px_rgba(201,169,110,0.16)] transition-all duration-300 hover:-translate-y-2 hover:border-[#f0d58c] hover:shadow-[0_12px_35px_rgba(201,169,110,0.38)]"
+
+
+      >
+        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#c9a96e]/15 text-[#9b8050]">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.7"
+            className="h-6 w-6"
+            aria-hidden="true"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.19 18a19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.09 3.18 2 2 0 0 1 4.08 1h3a2 2 0 0 1 2 1.72c.12.96.35 1.9.69 2.79a2 2 0 0 1-.45 2.11L8.05 8.9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.89.34 1.83.57 2.79.69A2 2 0 0 1 22 16.92Z"
+            />
+          </svg>
+        </div>
+
+        <h3 className="mt-5 text-lg font-semibold text-[#25231f]">
+          Bizi Arayın
+        </h3>
+
+        <p className="mt-2 text-lg font-medium text-[#060502]">
+          0535 082 67 48
+        </p>
+
+        <p className="mt-3 text-sm text-[#706a60]">
+          Telefonla doğrudan iletişime geçin.
+        </p>
+
+        <span className="mt-5 inline-block text-sm font-medium text-[#9b8050] group-hover:text-[#25231f]">
+          Şimdi ara ↗
+        </span>
+      </a>
+
+      {/* WHATSAPP */}
+      <a
+        href="https://wa.me/905350826748"
+        target="_blank"
+        rel="noopener noreferrer"
+className="group rounded-2xl border-2 border-[#d6b66f] bg-linear-to-br from-white via-[#fffdf8] to-[#f1f8f0] p-6 shadow-[0_4px_18px_rgba(201,169,110,0.16)] transition-all duration-300 hover:-translate-y-2 hover:border-[#f0d58c] hover:shadow-[0_12px_35px_rgba(201,169,110,0.38)]"  >
+        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366]/10 text-[#20a956]">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.7"
+            className="h-6 w-6"
+            aria-hidden="true"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20l1.2-5.3A8.4 8.4 0 1 1 21 11.5Z"
+            />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M9 9.5c.7 1.6 1.6 2.5 3.5 3.5l1.2-1.1 2 .9-.2 1.7c-3.6 1.1-8.8-4.1-7.7-7.7l1.7-.2.9 2Z"
+            />
+          </svg>
+        </div>
+
+        <h3 className="mt-5 text-lg font-semibold text-[#25231f]">
+          WhatsApp
+        </h3>
+
+        <p className="mt-2 text-lg font-medium text-[#25231f]">
+          0535 082 67 48
+        </p>
+
+        <p className="mt-3 text-sm text-[#706a60]">
+          Hızlıca iletişime geçin.
+        </p>
+
+        <span className="mt-5 inline-block text-sm font-medium text-[#20a956]">
+          Mesaj gönder ↗
+        </span>
+      </a>
+
+      {/* INSTAGRAM */}
+      <a
+        href="https://www.instagram.com/sezerdekorasyon_/"
+        target="_blank"
+        rel="noopener noreferrer"
+className="group rounded-2xl border-2 border-[#d6b66f] bg-linear-to-br from-white via-[#fffdf8] to-[#f5ead5] p-6 shadow-[0_4px_18px_rgba(201,169,110,0.16)] transition-all duration-300 hover:-translate-y-2 hover:border-[#f0d58c] hover:shadow-[0_12px_35px_rgba(201,169,110,0.38)]">
+        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#c9a96e]/15 text-[#ef1179]">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.7"
+            className="h-6 w-6"
+            aria-hidden="true"
+          >
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" />
+          </svg>
+        </div>
+
+        <h3 className="mt-5 text-lg font-semibold text-[#25231f]">
+          Instagram
+        </h3>
+
+        <p className="mt-2 text-lg font-medium text-[#e42088]">
+          @sezerdekorasyon_
+        </p>
+
+        <p className="mt-3 text-sm text-[#706a60]">
+          Uygulamalarımızı Instagram&apos;da keşfedin.
+        </p>
+
+        <span className="mt-5 inline-block text-sm font-medium text-[#9b8050] group-hover:text-[#25231f]">
+          Profili görüntüle ↗
+        </span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
 
 <section
   id="teklif"
@@ -1402,12 +1704,49 @@ Sezer Dekorasyon
                 Antalya • Türkiye
               </p>
 
-              <a
-                href="#teklif"
-                className="mt-5 inline-block text-sm text-white transition-colors hover:text-[#c9a96e]"
-              >
-                Teklif almak için iletişime geçin →
-              </a>
+
+<div className="mt-5 flex flex-wrap items-center gap-3 md:justify-end">
+  <a
+    href="https://wa.me/905350826748"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-2 rounded-full border border-[#c9a96e]/50 bg-[#c9a96e]/10 px-4 py-2.5 text-sm font-medium text-[#e2c58f] transition-all duration-300 hover:border-[#c9a96e] hover:bg-[#c9a96e] hover:text-[#17130e]"
+  >
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className="h-4 w-4"
+      aria-hidden="true"
+    >
+      <path d="M20.52 3.48A11.86 11.86 0 0 0 12.08 0C5.52 0 .18 5.34.18 11.9c0 2.1.55 4.15 1.6 5.96L.08 24l6.29-1.65a11.88 11.88 0 0 0 5.7 1.45h.01c6.56 0 11.9-5.34 11.9-11.9a11.83 11.83 0 0 0-3.46-8.42ZM12.08 21.8a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.73.98.99-3.64-.24-.38a9.86 9.86 0 0 1-1.52-5.27c0-5.47 4.45-9.92 9.92-9.92a9.86 9.86 0 0 1 7.02 2.91 9.86 9.86 0 0 1 2.9 7.01c0 5.47-4.45 9.9-9.94 9.9Z" />
+    </svg>
+    WhatsApp
+    <span aria-hidden="true">↗</span>
+  </a>
+
+  <a
+    href="https://www.instagram.com/sezerdekorasyon_/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-2 rounded-full border border-[#c9a96e]/50 bg-[#c9a96e]/10 px-4 py-2.5 text-sm font-medium text-[#e2c58f] transition-all duration-300 hover:border-[#c9a96e] hover:bg-[#c9a96e] hover:text-[#17130e]"
+  >
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      className="h-4 w-4"
+      aria-hidden="true"
+    >
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none" />
+    </svg>
+    Instagram
+    <span aria-hidden="true">↗</span>
+  </a>
+</div>
+
 
             </div>
 
