@@ -556,54 +556,56 @@ className="flex h-12 w-12 items-center justify-center rounded-full border border
             Hizmetlerimiz
           </p>
 
-          <h2 className="mt-5 text-4xl font-semibold tracking-[-0.03em] text-[#171614] md:text-6xl">
-            Projeniz için
-            <br />
-            <span className="text-[#a88a58]">
-              doğru çözüm.
-            </span>
-          </h2>
-
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-[#68645d] md:text-lg">
-            İhtiyacınıza göre planlanan, profesyonel ekip tarafından
-            uygulanan dekorasyon ve yapı çözümleri.
-          </p>
+         <h2 className="mt-5 text-4xl font-semibold tracking-[-0.03em] text-[#171614] md:text-6xl">
+  Antalya’da Asma Tavan
+  <br />
+  <span className="text-[#a88a58]">
+    ve Dekorasyon Uygulamaları.
+  </span>
+</h2><p className="mt-6 max-w-2xl text-base leading-relaxed text-[#68645d] md:text-lg">
+  Sezer Dekorasyon olarak Antalya genelinde metal asma tavan,
+  clip-in tavan, alçıpan, bölme duvar ve iç mekân dekorasyon
+  uygulamaları gerçekleştiriyoruz. Ofis, mağaza, otel ve ticari
+  alanlar için projenin ihtiyaçlarına uygun çözümler sunuyoruz.
+</p>
 
 
           <div className="mt-16 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-[#dcd7ce] bg-[#dcd7ce] md:grid-cols-2 lg:grid-cols-3">
 
-            {[
-              [
-                "01",
-                "Alçıpan Uygulamaları",
-                "İç mekânlarda estetik ve fonksiyonel alçıpan çözümleri.",
-              ],
-              [
-                "02",
-                "Clip-in Tavan",
-                "Modern ve kullanışlı tavan sistemleri.",
-              ],
-              [
-                "03",
-                "Metal Tavan",
-                "Ticari ve profesyonel alanlar için metal tavan uygulamaları.",
-              ],
-              [
-                "04",
-                "Bölme Duvar",
-                "Ofis, mağaza ve farklı kullanım alanları için bölme duvar çözümleri.",
-              ],
-              [
-                "05",
-                "Kaynak & Metal İşleri",
-                "Projeye özel metal imalat ve uygulama çözümleri.",
-              ],
-              [
-                "06",
-                "Dekorasyon Uygulamaları",
-                "Mekânın ihtiyaçlarına göre özel dekorasyon uygulamaları.",
-              ],
-            ].map(([number, title, text]) => (
+            {
+           [
+  [
+    "01",
+    "Alçıpan Uygulamaları",
+    "Antalya’da alçıpan asma tavan, tavan dekorasyonu ve iç mekân bölme uygulamaları.",
+  ],
+  [
+    "02",
+    "Clip-in Tavan",
+    "Ofis, mağaza ve ticari alanlar için modern, dayanıklı ve estetik clip-in asma tavan sistemleri.",
+  ],
+  [
+    "03",
+    "Metal Tavan",
+    "İş yerleri ve büyük ölçekli projeler için farklı ihtiyaçlara uygun metal asma tavan uygulamaları.",
+  ],
+  [
+    "04",
+    "Bölme Duvar",
+    "Ofis, mağaza ve ticari mekânlarda alanları işlevsel şekilde düzenleyen alçıpan bölme duvar çözümleri.",
+  ],
+  [
+    "05",
+    "Kaynak & Metal İşleri",
+    "Projeye özel ölçülendirme, metal imalat, kaynak ve montaj uygulamaları.",
+  ],
+  [
+    "06",
+    "Dekorasyon Uygulamaları",
+    "Ofis, mağaza ve yaşam alanları için mekânın mimarisine ve kullanım amacına uygun dekorasyon çözümleri.",
+  ],
+]
+            .map(([number, title, text]) => (
 
               <div
                 key={number}
@@ -658,17 +660,19 @@ className="flex h-12 w-12 items-center justify-center rounded-full border border
     </p>
 
     <h2 className="mt-5 text-4xl font-semibold tracking-[-0.03em] text-[#171614] md:text-6xl">
-      Gerçekleştirdiğimiz
-      <br />
-      <span className="text-[#a88a58]">
-        işler.
-      </span>
-    </h2>
+  Antalya ve Farklı
+  <br />
+  <span className="text-[#a88a58]">
+    Bölgelerdeki Projelerimiz.
+  </span>
+</h2>
 
     <p className="mt-6 max-w-2xl leading-relaxed text-[#68645d]">
-      Antalya başta olmak üzere farklı mekânlarda gerçekleştirdiğimiz
-      dekorasyon ve yapı uygulamalarından seçilmiş projeleri inceleyin.
-    </p>
+  Antalya başta olmak üzere farklı şehirlerde tamamladığımız asma tavan,
+  alçıpan, bölme duvar ve dekorasyon projelerini inceleyin.
+  Ofislerden mağazalara, ticari alanlardan özel yaşam alanlarına
+  kadar gerçekleştirdiğimiz uygulamaları keşfedin.
+</p>
 
 {/* =====================================================
     ÖNE ÇIKAN PROJELER

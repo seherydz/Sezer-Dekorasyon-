@@ -26,21 +26,40 @@ async function getProject(slug: string) {
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-
   const { slug } = await params;
   const project = await getProject(slug);
 
   if (!project) {
     return {
-      title: "Proje Bulunamadı | Sezer Dekorasyon Dekorasyon",
+      title: "Proje Bulunamadı | Sezer Dekorasyon",
+      robots: {
+        index: false,
+        follow: false,
+      },
     };
   }
 
-  return {
-    title: `${project.title} | ${project.location} | Sezer Dekorasyon Dekorasyon`,
-    description: `${project.location} bölgesinde gerçekleştirilen ${project.services.join(
+  const canonicalUrl = `https://sezerdekorasyon.com.tr/projeler/${project.slug}`;
+
+  const description =
+    `${project.location} bölgesinde ${project.services.join(
       ", "
-    )} uygulaması. Sezer Dekorasyon Dekorasyon proje detaylarını inceleyin.`,
+    )} uygulaması. ${project.description} Sezer Dekorasyon proje detaylarını inceleyin.`;
+
+  return {
+    title: `${project.title} | Sezer Dekorasyon`,
+    description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: `${project.title} | Sezer Dekorasyon`,
+      description,
+      url: canonicalUrl,
+      siteName: "Sezer Dekorasyon",
+      locale: "tr_TR",
+      type: "article",
+    },
   };
 }
 

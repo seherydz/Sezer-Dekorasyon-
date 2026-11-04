@@ -33,8 +33,8 @@ export const projects: Project[] = [
   title: "Asma Tavan ve LED Aydınlatma",
 
   description:
-    "Antalya'da gerçekleştirilen projede, iç mekâna modern ve bütünlüklü bir görünüm kazandırmak amacıyla kademeli alçıpan asma tavan uygulaması yapıldı. Tavan yüzeylerinde farklı kotlarda geometrik formlar oluşturularak mekânın mimari yapısına uygun bir tasarım elde edildi. Gizli LED aydınlatma kanalları ve çevresel ışık bantlarıyla sıcak, dengeli ve homojen bir aydınlatma etkisi sağlandı. Tavana entegre edilen gömme spot aydınlatmalarla ışık dağılımı desteklenirken, lineer havalandırma kanalları için gerekli boşluklar da tasarıma dâhil edildi. Uygulama sürecinde metal taşıyıcı tavan konstrüksiyonu oluşturuldu, alçıpan levhalar monte edildi ve yüzeyler son kat uygulamaya hazırlandı. Tamamlanan uygulamayla tavan tasarımı, aydınlatma detayları ve mekânın genel mimarisi arasında estetik bir uyum sağlandı.",
 
+  "Antalya'da gerçekleştirilen asma tavan ve LED aydınlatma projesinde, iç mekânın mimari yapısına uygun modern bir tavan tasarımı oluşturuldu. Uygulama kapsamında farklı kotlarda geometrik formlara sahip kademeli alçıpan asma tavan sistemi hazırlandı. Tavan tasarımına entegre edilen gizli LED aydınlatma kanalları ve çevresel ışık bantlarıyla dengeli bir aydınlatma görünümü elde edildi. Gömme spot aydınlatmalarla desteklenen tasarımda, lineer havalandırma kanalları için gerekli boşluklar da dikkate alındı. Uygulama sürecinde metal taşıyıcı tavan konstrüksiyonu oluşturuldu, alçıpan levhaların montajı gerçekleştirildi ve yüzeyler son kat uygulamasına hazırlandı. Tamamlanan Antalya asma tavan uygulamasıyla tavan geometrisi, LED aydınlatma detayları ve mekânın mimarisi arasında bütünlüklü bir görünüm sağlandı.",
   location: "Antalya",
 
   services: [
@@ -70,9 +70,8 @@ afterImages: [
     title: "Ofis Bölme Duvar ve Tavan Uygulaması",
 
     description:
-      
-       "istanbul'da gerçekleştirilen ofis uygulamasında, çalışma alanının ihtiyaçlarına uygun bölme duvar ve tavan çözümleriyle işlevsel bir mekân oluşturuldu.",
 
+  "İstanbul'da gerçekleştirilen ofis bölme duvar ve tavan uygulamasında, çalışma alanının ihtiyaçlarına uygun işlevsel bir mekân düzenlemesi yapıldı. Ofis içerisinde farklı kullanım alanları oluşturmak amacıyla bölme duvar sistemleri uygulandı ve tavan düzenlemeleriyle mekânın genel görünümünün bütünlüğü hedeflendi. Uygulama kapsamında çalışma alanının kullanım ihtiyaçları dikkate alınarak daha düzenli ve verimli bir iç mekân oluşturulmasına yönelik çözümler geliştirildi.",
     location: "İstanbul",
 
     services: ["Bölme Duvar Sistemleri", "Tavan Uygulamaları"],
@@ -101,8 +100,8 @@ afterImages: [
 
   title: "Alçıpan Bölme Duvar ve İç Mekân Düzenlemesi",
 
-  description:
-    "Antalya'da gerçekleştirilen uygulamada, iç mekânın yeniden düzenlenmesi amacıyla galvanizli metal profillerden taşıyıcı karkas oluşturuldu. Bölme duvar sisteminde profiller arasına mineral yün yalıtım malzemesi yerleştirildi ve alçıpan levhaların montajı gerçekleştirildi. Duvar yüzeylerinde levha birleşim noktalarının derz işlemleri ve yüzey düzeltme çalışmaları yapılarak boya ve son kat uygulamalarına uygun bir zemin hazırlandı. Çalışma kapsamında mevcut duvar ve tavan yüzeylerinin düzenlenmesi, yeni bölme duvarın oluşturulması ve mekânın kullanıma hazır hâle getirilmesi hedeflendi.",
+ description:
+  "Antalya'da gerçekleştirilen alçıpan bölme duvar ve iç mekân düzenleme projesinde, mevcut alanın kullanım ihtiyaçlarına uygun şekilde yeniden düzenlenmesi hedeflendi. Uygulama kapsamında galvanizli metal profiller kullanılarak bölme duvar taşıyıcı karkası oluşturuldu. Metal profiller arasına mineral yün yalıtım malzemesi yerleştirildi ve alçıpan levhaların montajı gerçekleştirildi. Duvar yüzeylerinde levha birleşim noktalarına derz uygulaması yapıldı, yüzey düzeltme çalışmaları tamamlanarak boya ve son kat işlemlerine uygun bir zemin hazırlandı. Mevcut duvar ve tavan yüzeylerinin düzenlenmesiyle birlikte yeni bölme duvar sistemi mekânın genel yapısına entegre edildi. Tamamlanan Antalya alçıpan bölme duvar uygulamasıyla daha düzenli ve işlevsel bir iç mekân oluşturuldu.",
 
   location: "Antalya",
 
@@ -142,8 +141,8 @@ afterImages: [
 
   title: "TV Ünitesi ve Dekoratif Duvar Tasarımı",
 
-  description:
-    "Bodrum'da gerçekleştirilen iç mekân dekorasyon projesinde, salonun mimari yapısına uygun modern bir TV ünitesi ve dekoratif duvar tasarımı uygulandı. TV ünitesinin arka bölümünde mermer görünümlü dekoratif yüzey kaplaması kullanılarak mekâna zarif ve bütünlüklü bir görünüm kazandırıldı. Duvarın iki yanında konumlandırılan ahşap görünümlü dikey dekoratif panellerle tasarıma derinlik ve doğal bir karakter eklendi. TV ünitesi altında uygulanan duvar boyunca uzanan sabit dolapla hem sade hem de işlevsel bir kullanım alanı oluşturuldu. Dekoratif yüzeylerin çevresinde ve mobilya detaylarında kullanılan gizli LED aydınlatmalar, duvar tasarımını ön plana çıkararak sıcak bir ambiyans sağladı. Tavan bölümünde kademeli alçıpan asma tavan, gizli LED ışık bantları ve gömme spot aydınlatmalar uygulandı. Böylece tavan ve duvar aydınlatmaları birbiriyle uyumlu hâle getirilerek salonun genel tasarımı bütünleştirildi. Uygulama sonucunda ahşap dokular, mermer görünümlü yüzeyler, sıcak ışık detayları ve modern mobilya çizgileri bir araya getirilerek estetik ve konforlu bir yaşam alanı oluşturuldu.",
+ description:
+  "Bodrum'da gerçekleştirilen TV ünitesi ve dekoratif duvar tasarımı projesinde, salonun mimari yapısına uygun modern ve bütünlüklü bir iç mekân tasarımı oluşturuldu. TV ünitesinin arka bölümünde mermer görünümlü dekoratif duvar kaplaması kullanılarak mekâna zarif bir görünüm kazandırıldı. Duvarın iki yanında konumlandırılan ahşap görünümlü dikey dekoratif panellerle tasarıma derinlik ve doğal bir karakter eklendi. TV ünitesinin alt bölümünde uygulanan sabit dolapla estetik ve işlevsellik bir araya getirildi. Dekoratif duvar yüzeylerinde ve mobilya detaylarında kullanılan gizli LED aydınlatmalarla sıcak bir ambiyans oluşturuldu. Tavan bölümünde ise kademeli alçıpan asma tavan, gizli LED ışık bantları ve gömme spot aydınlatma uygulamaları gerçekleştirildi. Böylece TV ünitesi, dekoratif duvar panelleri ve tavan aydınlatmaları arasında görsel bütünlük sağlanarak modern bir yaşam alanı ortaya çıkarıldı.", 
 
   location: "Bodrum",
 
