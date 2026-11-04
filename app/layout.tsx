@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -13,13 +14,45 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-
 export const metadata: Metadata = {
-  title: "Sezer Dekorasyon | Asma Tavan ve İç Mekân Tasarımı",
-  description:
-    "Sezer Dekorasyon; Antalya başta olmak üzere Türkiye genelinde asma tavan, alçıpan, bölme duvar, metal tavan ve dekorasyon uygulamaları gerçekleştirir.",
-};
+  metadataBase: new URL("https://sezerdekorasyon.com.tr"),
 
+  title: "Antalya Asma Tavan ve Dekorasyon | Sezer Dekorasyon",
+
+  description:
+    "Antalya asma tavan, alçıpan, clip-in tavan, metal tavan ve bölme duvar uygulamaları. Sezer Dekorasyon ile profesyonel proje çözümleri ve teklif alın.",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  openGraph: {
+    title: "Sezer Dekorasyon | Antalya Asma Tavan ve Dekorasyon",
+    description:
+      "Antalya'da asma tavan, alçıpan, metal tavan ve iç mekân dekorasyon uygulamaları.",
+    url: "https://sezerdekorasyon.com.tr",
+    siteName: "Sezer Dekorasyon",
+    locale: "tr_TR",
+    type: "website",
+  },
+
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Sezer Dekorasyon | Antalya",
+    description:
+      "Antalya'da profesyonel tavan sistemleri ve dekorasyon uygulamaları.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+};
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
@@ -28,9 +61,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-  {children}
-  <WhatsAppButton />
-</body>
+        {children}
+        <WhatsAppButton />
+      </body>
     </html>
   );
 }
