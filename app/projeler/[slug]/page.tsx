@@ -23,6 +23,7 @@ async function getProject(slug: string) {
    SEO
 ===================================================== */
 
+
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
@@ -41,27 +42,63 @@ export async function generateMetadata({
 
   const canonicalUrl = `https://sezerdekorasyon.com.tr/projeler/${project.slug}`;
 
+  const title = `${project.title} - ${project.location} | Sezer Dekorasyon`;
+
+  const plainDescription = project.description
+    .replace(/\s+/g, " ")
+    .trim();
+
+  const fullDescription =
+    `${project.location} ${project.services.join(", ")}. ${plainDescription}`;
+
   const description =
-    `${project.location} bölgesinde ${project.services.join(
-      ", "
-    )} uygulaması. ${project.description} Sezer Dekorasyon proje detaylarını inceleyin.`;
+    fullDescription.length > 157
+      ? fullDescription.slice(0, 157).replace(/\s+\S*$/, "") + "..."
+      : fullDescription;
+
+  const imageUrl = new URL(
+    project.image,
+    "https://sezerdekorasyon.com.tr"
+  ).toString();
 
   return {
-    title: `${project.title} | Sezer Dekorasyon`,
+    title,
     description,
+
     alternates: {
       canonical: canonicalUrl,
     },
+
     openGraph: {
-      title: `${project.title} | Sezer Dekorasyon`,
+      title,
       description,
       url: canonicalUrl,
       siteName: "Sezer Dekorasyon",
       locale: "tr_TR",
       type: "article",
+      images: [
+        {
+          url: imageUrl,
+          alt: `${project.location} ${project.title}`,
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [imageUrl],
+    },
+
+    robots: {
+      index: true,
+      follow: true,
     },
   };
 }
+
+
 
 
 /* =====================================================

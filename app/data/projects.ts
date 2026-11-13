@@ -1,11 +1,10 @@
 export type Project = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  [x: string]: any;
   slug: string;
   title: string;
   description: string;
   location: string;
   services: string[];
+  category?: string;
 
   /* Ana kapak görseli */
   image: string;

@@ -641,6 +641,103 @@ className="flex h-12 w-12 items-center justify-center rounded-full border border
       </section>
 
 
+      {/* =====================================================
+          ANTALYA CLIP-IN TAVAN PROJE VİDEOSU
+      ===================================================== */}
+
+      <section
+        id="clipin-tavan-video"
+        aria-labelledby="clipin-video-title"
+        className="bg-[#171614] py-20 text-white md:py-28"
+      >
+        <div className="mx-auto max-w-7xl px-6">
+
+          <div className="grid items-end gap-6 md:grid-cols-2">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#c9a96e]">
+                Gerçek Uygulama Görüntüleri
+              </p>
+
+              <h2
+                id="clipin-video-title"
+                className="mt-5 text-3xl font-semibold leading-tight tracking-tight md:text-5xl"
+              >
+                Antalya Clip-in
+                <br />
+                <span className="text-[#c9a96e]">
+                  Metal Asma Tavan Uygulaması
+                </span>
+              </h2>
+            </div>
+
+            <p className="max-w-xl text-sm leading-7 text-white/65 md:justify-self-end md:text-base">
+              Antalya&apos;da gerçekleştirdiğimiz Clip-in metal asma tavan
+              uygulamasının montaj aşamalarını ve tamamlanmış proje
+              görüntülerini keşfedin. Sezer Dekorasyon ile profesyonel
+              tavan sistemlerini yakından inceleyin.
+            </p>
+          </div>
+
+          <div className="mt-12 overflow-hidden rounded-2xl border border-[#c9a96e]/25 bg-black shadow-2xl">
+            <video
+              className="aspect-video w-full object-cover"
+              controls
+              playsInline
+              preload="metadata"
+              poster="/images/antalya-clipin-tavan-sonrasi.jpg"
+              aria-label="Antalya Clip-in metal asma tavan uygulama videosu"
+            >
+              <source
+                src="/videos/clipin-tavan-antalya.mp4"
+                type="video/mp4"
+              />
+              Tarayıcınız video oynatmayı desteklemiyor.
+            </video>
+          </div>
+
+          <div className="mt-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
+            <p className="text-xs uppercase tracking-[0.18em] text-white/45">
+              SEZER DEKORASYON · ANTALYA
+            </p>
+
+            <a
+              href="#teklif"
+              className="inline-flex items-center justify-center gap-3 rounded-full bg-[#c9a96e] px-7 py-3.5 text-sm font-semibold text-[#171614] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#dfc18a]"
+            >
+              Projeniz İçin Teklif Al
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+         
+          {/* GOOGLE VIDEO SEO - STRUCTURED DATA */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "VideoObject",
+                name: "Antalya Clip-in Metal Asma Tavan Uygulaması | Sezer Dekorasyon",
+                description:
+                  "Sezer Dekorasyon tarafından Antalya'da gerçekleştirilen Clip-in metal asma tavan uygulamasının montaj aşamaları ve tamamlanmış proje görüntüleri.",
+                thumbnailUrl:
+                  "https://sezerdekorasyon.com.tr/images/antalya-clipin-tavan-sonrasi.jpg",
+                contentUrl:
+                  "https://sezerdekorasyon.com.tr/videos/clipin-tavan-antalya.mp4",
+                uploadDate: "2026-11-13",
+                duration: "PT20S",
+                inLanguage: "tr-TR",
+                publisher: {
+                  "@type": "Organization",
+                  name: "Sezer Dekorasyon",
+                  url: "https://sezerdekorasyon.com.tr/"
+                }
+              })
+            }}
+          />
+
+        </div>
+      </section>
+
       
       {/* =====================================================
     PROJELER
