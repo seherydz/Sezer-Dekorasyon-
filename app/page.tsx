@@ -679,20 +679,25 @@ className="flex h-12 w-12 items-center justify-center rounded-full border border
           </div>
 
           <div className="mt-12 overflow-hidden rounded-2xl border border-[#c9a96e]/25 bg-black shadow-2xl">
-            <video
-              className="aspect-video w-full object-cover"
-              controls
-              playsInline
-              preload="metadata"
-              poster="/images/antalya-clipin-tavan-sonrasi.jpg"
-              aria-label="Antalya Clip-in metal asma tavan uygulama videosu"
-            >
-              <source
-                src="/videos/clipin-tavan-antalya.mp4"
-                type="video/mp4"
-              />
-              Tarayıcınız video oynatmayı desteklemiyor.
-            </video>
+           
+<video
+  className="aspect-video w-full object-cover"
+  controls
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="metadata"
+  poster="/images/antalya-clipin-tavan-sonrasi.jpg"
+  aria-label="Antalya Clip-in metal asma tavan uygulama videosu"
+>
+  <source
+    src="/videos/clipin-tavan-antalya.mp4"
+    type="video/mp4"
+  />
+  Tarayıcınız video oynatmayı desteklemiyor.
+</video>
+
           </div>
 
           <div className="mt-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
